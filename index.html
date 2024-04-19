@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+  </body>
+
+  <script>
+    let ws;
+    const proto = window.location.protocol === "https" ? "wss" : "ws";
+    console.log("yo");
+    ws = new WebSocket(`${proto}://${window.location.host}`);
+
+    ws.onmessage = (event) => {
+      console.log(event.data);
+    };
+  </script>
+</html>

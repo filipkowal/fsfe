@@ -7,9 +7,10 @@ app.get("/", (req, res) => {
 });
 
 server.on("request", app);
-server.listen(80, () => {
-  console.log("Server started on port 80");
+server.listen(3000, () => {
+  console.log("Server started on port 3000");
 });
+
 // Begin websocket
 const WebSockeServer = require("ws").Server;
 

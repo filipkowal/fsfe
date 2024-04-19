@@ -18,5 +18,21 @@
     ws.onmessage = (event) => {
       console.log(event.data);
     };
+
+    ws.onerror = (error) => {
+      console.error("WebSocket Error: ", error);
+    };
+
+    ws.onopen = (event) => {
+      console.log("WebSocket is open now.");
+    };
+
+    ws.onclose = (event) => {
+      console.log("WebSocket is closed now.");
+    };
+
+    ws.onmessage = (event) => {
+      console.log(event.data);
+    };
   </script>
 </html>
